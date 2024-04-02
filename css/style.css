@@ -1,0 +1,111 @@
+/* the props */
+@import "https://unpkg.com/open-props";
+@import 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap';
+
+
+
+#entranceBody {
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1517857399767-a9dc28f5a734?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+}
+
+#mainBody {
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1591209608777-fb022eac7112?q=80&w=2997&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+}
+
+#entranceTitle,
+header {
+    font-size: var(--font-size-fluid-3);
+    font-weight: var(--font-weight-8);
+    font-family: "Abril Fatface", serif;
+    font-style: normal;
+    color: var(--indigo-4);
+    letter-spacing: var(--font-letterspacing-3);
+}
+
+#entranceTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    text-decoration: none;
+}
+
+#mainHeader {
+    animation: slide-in-down 1s var(--ease-3);
+}
+
+#aboutBody {
+    background-color: hsl(187, 100%, 97%);
+}
+
+#aboutMain {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--indigo-10);
+}
+
+#aboutImg {
+    max-width: 70%;
+    margin-top: 5cap;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Adjustments for small screens */
+    #imagePlace {
+        display: block;
+    }
+
+    #aboutImgContainer {
+        display: none;
+    }
+
+    #aboutImg {
+        display: block;
+    }
+}
+
+.horizontal-divider {
+    border-bottom: 1px solid var(--indigo-4);
+}
+
+.button-grid {
+    display: grid;
+    place-content: center;
+}
+
+header {
+    padding: var(--size-fluid-1);
+    display: grid;
+    place-content: center;
+}
+
+button {
+    padding: var(--size-fluid-1);
+    margin: var(--size-fluid-2);
+    inline-size: var(--size-relative-15);
+    font-size: var(--font-size-2);
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    color: var(--indigo-4);
+    border: var(--border-size-1) solid var(--indigo-4);
+    background-color: var(--stone-3);
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-4);
+    animation: slide-in-up 1s var(--ease-3);
+
+    &:hover {
+        background-color: var(--blue-1);
+    }
+}
+
+li {
+    list-style-type: none;
+    margin: var(--size-fluid-1);
+    line-height: var(--size-6);
+}
