@@ -1,8 +1,107 @@
 /* the props */
 @import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
 @import 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap';
 
 
+header {
+    padding: var(--size-fluid-1);
+    display: grid;
+    place-content: center;
+}
+
+button {
+    padding: var(--size-fluid-1);
+    margin: var(--size-fluid-2);
+    inline-size: var(--size-relative-15);
+    font-size: var(--font-size-2);
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    color: var(--indigo-4);
+    border: var(--border-size-1) solid var(--indigo-4);
+    background-color: var(--stone-3);
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-4);
+    animation: slide-in-up 1s var(--ease-3);
+
+    &:hover {
+        background-color: var(--blue-1);
+    }
+}
+
+p {
+    max-inline-size: 100%;
+    margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    max-width: 1000px;
+    margin: 1rem auto;
+    grid-template-columns: auto auto;
+    grid-auto-rows: auto;
+
+}
+.grid-container > :nth-child(n + 3) {
+    grid-column: span 2;
+}
+
+.grid-item {
+    margin: var(--size-fluid-1);
+    line-height: var(--size-6);
+    text-align: left;
+    background-color: transparent;
+    color: var(--indigo-4);
+}
+
+.horizontal-divider {
+    border-bottom: 1px solid var(--indigo-4);
+}
+
+.button-grid {
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    flex-basis: var(--size-fluid-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4);
+    background: var(--gradient-22);
+    padding: var(--size-5);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-2);  
+}
+
+.card>h4 {
+    line-height: var(--font-lineheight-1);
+    margin: 0 auto;
+    color: var(--indigo-10);
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.card>img {
+    border-radius: var(--radius-3);
+    object-fit: cover;
+    block-size: var(--size-content-3);
+    width:25rem;
+}
+
+.body-background {
+    background-color: hsl(201, 71%, 88%);
+}
+
+.main-theme {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--indigo-10);
+}
 
 #entranceBody {
     background-size: cover;
@@ -31,70 +130,35 @@ header {
     justify-content: center;
     align-items: center;
     min-height: 100dvh;
-    text-decoration: none;
 }
 
 #mainHeader {
     animation: slide-in-down 1s var(--ease-3);
 }
 
-.body-background {
-    background-color:hsl(201, 71%, 88%);
-}
-
-.main-theme {
-    max-width: 900px;
-    margin: 0 auto;
-    color: var(--indigo-10);
-}
-
 #aboutImg {
-    max-width: 70%;
-    margin-top: 1rem;
+    max-width: 9rem;
+    margin-top: 2rem;
 }
 
 #imagePlace {
-    max-width:30%;
+    max-width: 9rem;
     margin: 1rem auto 1rem auto;
 
 }
 
-.horizontal-divider {
-    border-bottom: 1px solid var(--indigo-4);
-}
-
-.button-grid {
+#cardContainer {
     display: grid;
     place-content: center;
+    margin-top: 1ch;
 }
 
-header {
-    padding: var(--size-fluid-1);
-    display: grid;
-    place-content: center;
-}
-
-button {
-    padding: var(--size-fluid-1);
-    margin: var(--size-fluid-2);
-    inline-size: var(--size-relative-15);
-    font-size: var(--font-size-2);
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    color: var(--indigo-4);
-    border: var(--border-size-1) solid var(--indigo-4);
-    background-color: var(--stone-3);
-    box-shadow: var(--shadow-2);
-    border-radius: var(--radius-4);
-    animation: slide-in-up 1s var(--ease-3);
-
-    &:hover {
-        background-color: var(--blue-1);
-    }
-}
-
-li {
-    list-style-type: none;
-    margin: var(--size-fluid-1);
-    line-height: var(--size-6);
+#cards {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    max-inline-size: calc(var(--size-content-2) * 4);
+    gap: var(--size-9);
+    padding: var(--size-5);
 }
