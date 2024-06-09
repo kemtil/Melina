@@ -1,0 +1,46 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+@import 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap';
+
+
+.card {
+    flex-basis: var(--size-fluid-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4);
+    background: var(--gradient-22);
+    padding: var(--size-5);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-2);  
+}
+
+.card>h4 {
+    line-height: var(--font-lineheight-1);
+    margin: 0 auto;
+    color: var(--indigo-10);
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.card>img {
+    border-radius: var(--radius-3);
+    object-fit: cover;
+    block-size: var(--size-content-3);
+    width:25rem;
+}
+
+#cardContainer {
+    display: grid;
+    place-content: center;
+    margin-top: 1ch;
+}
+
+#cards {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    max-inline-size: calc(var(--size-content-2) * 4);
+    gap: var(--size-9);
+    padding: var(--size-5);
+}
