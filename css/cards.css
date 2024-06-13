@@ -13,6 +13,10 @@
     padding: var(--size-5);
     border-radius: var(--radius-3);
     box-shadow: var(--shadow-2);  
+    &:hover {
+        animation: var(--animation-pulse);
+        /* animation-duration: s; */
+    }
 }
 
 .card>h4 {
@@ -25,7 +29,7 @@
 .card>img {
     border-radius: var(--radius-3);
     object-fit: cover;
-    block-size: var(--size-content-3);
+    block-size: var(--size-fluid-10);
     width:25rem;
 }
 

@@ -1,23 +1,19 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const aboutImg = document.getElementById('aboutImg');
-    const imagePlace = document.getElementById('imagePlace');
+window.addEventListener("DOMContentLoaded", () => {
+  function doRepositionFooter() {
+    const header_height = document.getElementsByTagName("header")[0].clientHeight + 2;
+    const content_height = document.getElementsByTagName("div")[0].clientHeight;
+    const footer_height = document.getElementsByTagName("footer")[0].clientHeight;
 
-    function handleImageVisibility() {
-        const screenWidth = window.innerWidth;
-        if (screenWidth <= 800) {
-            aboutImg.style.display = 'none';
-            imagePlace.style.display = 'block'; // Show the image placeholder
-        } else {
-            aboutImg.style.display = 'block';
-            imagePlace.style.display = 'none'; // Hide the image placeholder
-        }
+    const body_height = header_height + content_height + footer_height;
+
+    if (window.innerHeight > body_height) {
+      t = window.innerHeight - header_height - footer_height - 20;
+      document.getElementsByClassName("content")[0].style.height = t + "px";
     }
+  }
 
-    // Initial execution of the function
-    handleImageVisibility();
-
-    // Event listener for resizing the window
-    window.addEventListener('resize', () => {
-        handleImageVisibility();
-    });
-});
+  doRepositionFooter();
+  window.addEventListener("resize", () => {
+    doRepositionFooter();
+  });
+  });

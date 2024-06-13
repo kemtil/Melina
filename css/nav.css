@@ -6,15 +6,30 @@
 nav {
   border-top: 1px solid var(--indigo-4);
   border-bottom: 1px solid var(--indigo-4);
-  display: grid;
-  place-content: center;
   background-color: var(--blue-1);
-
+  position: sticky;
+  top: 0;
 }
 nav ul {
   width: auto;
   list-style-type: none;
-  padding: 0;
+  display: grid;
+  place-content: center;
+  padding: 0 var(--size-fluid-10);
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.1rem 3rem;
+  }
+}
+
+@media (min-width: 701px) {
+  nav ul {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0rem 1rem;
+  }
 }
 
 nav ul li {
@@ -31,6 +46,11 @@ nav ul li {
 
 .dropdown-content {
   text-decoration: none;
+}
+
+.dropdown-menu {
+  display: flex;
+  justify-content: center;
 }
 
 .dropdown-menu a,
@@ -61,4 +81,8 @@ nav ul li {
   display: none;
   background-color: var(--blue-1);
   border: 1px solid var(--indigo-4);
+}
+
+#navIcon {
+  height: 2.2rem;
 }

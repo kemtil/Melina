@@ -10,6 +10,23 @@ header {
   place-content: center;
 }
 
+footer {
+  padding: var(--size-fluid-1);
+  display: grid;
+  place-content: center;
+  position: relative;
+  bottom: 2%;
+  width: 100%;
+}
+
+footer .footerContents {
+  font-size: var(--font-size-fluid-0);
+  font-family: "Abril Fatface", serif;
+  font-style: normal;
+  color: var(--indigo-3);
+  text-decoration: none;
+}
+
 
 button {
   padding: var(--size-fluid-1);
@@ -20,7 +37,7 @@ button {
   font-style: normal;
   color: var(--indigo-4);
   border: var(--border-size-1) solid var(--indigo-4);
-  background-color: var(--stone-3);
+  background-color: var(--blue-1);
   box-shadow: var(--shadow-2);
   border-radius: var(--radius-4);
   animation: slide-in-up 1s var(--ease-3);
@@ -39,6 +56,10 @@ p {
 a {
   text-decoration: none;
   text-decoration-line: none;
+}
+
+.content {
+  display: block;
 }
 
 .grid-container {
@@ -64,13 +85,30 @@ a {
   border-bottom: 1px solid var(--indigo-4);
 }
 
+.contents-divider {
+  border-bottom: 1px solid var(--indigo-4);
+}
+
+.footer-divider{
+  border-bottom: 1px solid var(--indigo-4);
+  position: relative;
+  bottom: 10%;
+  width: 100%;
+}
+
 .button-grid {
   display: grid;
+  place-content: center;
+  margin-top : 2rem;
+}
+
+section {
+  display: block;
   place-content: center;
 }
 
 .body-background {
-  background-color: hsl(201, 71%, 88%);
+  background-color: hsl(200, 100%, 96%);
 }
 
 .main-theme {
@@ -87,7 +125,7 @@ a {
 #mainBody {
   /* background-size: cover;
     background-image: url("https://images.unsplash.com/photo-1591209608777-fb022eac7112?q=80&w=2997&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
-  background-color: hsl(201, 71%, 88%);
+  background-color: hsl(200, 100%, 96%);
 }
 
 #entranceTitle,
@@ -113,6 +151,32 @@ header a {
   animation: slide-in-down 1s var(--ease-3);
 }
 
+
+
+@media (max-width:700px) {
+  section {
+    display: grid;
+  }
+  #aboutImg {
+    display: none;
+  }
+  #imagePlace {
+    display: block;
+  }
+}
+
+@media (min-width:701px) {
+  section {
+    display: block;
+  }
+  #aboutImg {
+    display: block;
+  }
+  #imagePlace {
+    display: none;
+  }
+}
+
 #aboutImg {
   max-width: 9rem;
   margin-top: 2rem;
@@ -122,3 +186,7 @@ header a {
   max-width: 9rem;
   margin: 1rem auto 1rem auto;
 }
+
+/* #menuIcon {
+  max-width: 3rem;
+} */
