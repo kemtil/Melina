@@ -31,18 +31,17 @@ nav ul {
     grid-template-columns: repeat(6, 1fr);
     gap: 0rem 1rem;
   }
+  .dropdown {
+    position: relative;
+    &:hover .dropdown-content {
+      display: block;
+    }
+  }
 }
 
 nav ul li {
   display: inline-block;
   padding: 0;
-}
-
-.dropdown {
-  position: relative;
-  &:hover .dropdown-content {
-    display: block;
-  }
 }
 
 .dropdown-content {
