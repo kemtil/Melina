@@ -1,50 +1,136 @@
-@import "https://unpkg.com/open-props";
-@import "https://unpkg.com/open-props/normalize.min.css";
-@import "https://unpkg.com/open-props/buttons.min.css";
-@import 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap';
+.card-container {
+  display: grid;
+  gap: 0.5rem;
+  place-content: center;
+}
 
+.jewerly-header {
+  text-align: center;
+  margin: 1rem auto 0.5rem auto;
+  color: var(--indigo-10);
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: var(--size-1);
+  gap: var(--size-4);
+}
 
 .card {
-    flex-basis: var(--size-fluid-10);
-    display: flex;
+  flex-basis: var(--size-fluid-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4);
+  padding: var(--size-3);
+  box-shadow: var(--shadow-2);
+  margin: 1rem 0 1rem 0;
+  &:hover {
+    animation: var(--animation-shake-z);
+  }
+}
+
+.card-caption {
+  line-height: var(--font-lineheight-1);
+  margin: 0 auto;
+  color: var(--indigo-10);
+  text-align: center;
+}
+
+.card-image {
+  object-fit: cover;
+}
+
+#main-card,
+.card > img {
+  border-radius: var(--radius-3);
+}
+
+#main-card {
+  background: var(--gradient-22);
+}
+
+.card-image,
+.work-word {
+  block-size: clamp(20rem, 70vw, 25rem);
+  width: clamp(20rem, 70vw, 25rem);
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.work-word {
+  color: var(--indigo-10);
+}
+
+.work-span {
+  display: flex;
+}
+
+#work-card {
+  background: var(--gradient-22);
+  margin: 1rem 0 1rem 0;
+  transform: scale(1);
+  animation: none;
+  &:hover {
+    transform: scale(1.03);
+    transition: transform 0.5s;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: hsla(200, 100%, 96%, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  color: var(--indigo-4);
+  font-size: 3rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .work-span {
     flex-direction: column;
-    gap: var(--size-4);
-    background: var(--gradient-22);
-    padding: var(--size-5);
-    border-radius: var(--radius-3);
-    box-shadow: var(--shadow-2);  
-    &:hover {
-        animation: var(--animation-pulse);
-        /* animation-duration: s; */
-    }
+  }
 }
 
-.card>h4 {
-    line-height: var(--font-lineheight-1);
-    margin: 0 auto;
-    color: var(--indigo-10);
-    text-align: center; /* 텍스트 가운데 정렬 */
+@media (min-width: 701px) {
+  .work-span {
+    flex-direction: row;
+  }
 }
 
-.card>img {
-    border-radius: var(--radius-3);
-    object-fit: cover;
-    block-size: var(--size-fluid-10);
-    width:25rem;
-}
-
-#cardContainer {
-    display: grid;
-    place-content: center;
-    margin-top: 1ch;
-}
-
-#cards {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    max-inline-size: calc(var(--size-content-2) * 4);
-    gap: var(--size-9);
-    padding: var(--size-5);
+@media (min-width: 1000px) {
+  .work-span {
+    flex-direction: row;
+  }
 }

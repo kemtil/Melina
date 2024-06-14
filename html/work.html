@@ -12,7 +12,7 @@
   <body class="body-background">
     <header><a href="main.html">Melina's Portfolio</a></header>
     <div class="content">
-      <nav class="mainNav">
+      <nav>
         <ul>
           <li class="dropdown">
             <div class="dropdown-menu"><a href="about.html">ABOUT</a></div>
@@ -34,22 +34,34 @@
             </div>
           </li>
           <li class="dropdown">
-            <div class="dropdown-menu"><a href="read.html"><img id=navIcon src="../img/instagram.svg"></a></div>
+            <div class="dropdown-menu">
+              <a href="https://www.instagram.com/emotional_palettte/"
+                ><img class="nav-icon" src="../img/instagram.svg"
+              /></a>
+            </div>
           </li>
         </ul>
       </nav>
-      <div id="cardContainer">
-        <div id="cards">
+      <div class="card-container">
+        <div class="cards">
           <a href="fine_jewelry.html">
-            <div class="card">
-              <img src="../img/fine_jewelry.png" alt="fine jewelry" />
-              <h4>FINE JEWELRY</h4>
+            <div id="main-card" class="card">
+              <img
+                class="card-image"
+                src="../img/fine_jewelry.png"
+                alt="fine jewelry"
+              />
+              <h4 class="card-caption">FINE JEWELRY</h4>
             </div>
           </a>
           <a href="fashion_jewelry.html">
-            <div class="card">
-              <img src="../img/fashion_jewelry.png" alt="fashion jewelry" />
-              <h4>FASHION JEWELRY</h4>
+            <div id="main-card" class="card">
+              <img
+                class="card-image"
+                src="../img/fashion_jewelry.png"
+                alt="fashion jewelry"
+              />
+              <h4 class="card-caption">FASHION JEWELRY</h4>
             </div>
           </a>
         </div>
@@ -61,8 +73,15 @@
     <div class="footerContents">
       <span> Melina's Portfolio </span> <br />
       <span class="contents-divider"></span>
-      <span>WEB : www.website.com / MAIL : emal@email.com</span>
+      <span class="info">
+        <img
+          class="icon"
+          src="../img/web_icon.svg"
+        />melin.netlify.app&nbsp;&nbsp;&nbsp;&nbsp;
+        <img class="icon" src="../img/email_icon.svg" />aaaaction@gmail.com
+      </span>
     </div>
   </footer>
-  <script src="../script/control.js"></script>
+  <script src="../script/footer_control.js"></script>
+  <script src="../script/card_background.js"></script>
 </html>
