@@ -11,21 +11,15 @@ nav ul {
   display: grid;
   place-content: center;
   padding: 0 30vw 0 30vw;
+  gap: 0rem 1rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 700px) {
-  nav ul {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.1rem 2.5rem;
-    padding: 0;
-  }
+  
 }
 
 @media (min-width: 701px) {
-  nav ul {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0rem 1rem;
-  }
   .dropdown {
     position: relative;
     &:hover .dropdown-content {
