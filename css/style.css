@@ -177,6 +177,7 @@ header a {
   height: 1rem;
   margin-right: 0.2rem;
   margin-top: 0.1rem;
+  text-decoration: none;
   filter: brightness(0) saturate(100%) invert(17%) sepia(84%) saturate(2285%)
     hue-rotate(224deg) brightness(97%) contrast(89%);
 }
