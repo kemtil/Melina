@@ -173,16 +173,38 @@ header a {
   margin: 0 0 2rem 2rem;
 }
 
-.info {
+.footer-container {
   display: flex;
   align-items: center;
+  margin-top: 0.5vw;
+}
+
+.footer-item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 0.5vw 0 0.5vw;
+  &::after {
+    content: "";
+    width: 1px;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--indigo-3);
+  }
+  &:last-child::after {
+    display: none;
+  }
 }
 
 .icon {
-  height: 1rem;
-  margin-right: 0.2rem;
-  margin-top: 0.1rem;
+  display: inline-block;
+  height: clamp(1rem, 4vw, 1.5rem);
+  margin-right: 0.5vw;
   text-decoration: none;
   filter: brightness(0) saturate(100%) invert(17%) sepia(84%) saturate(2285%)
     hue-rotate(224deg) brightness(97%) contrast(89%);
+ 
 }
