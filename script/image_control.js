@@ -1,27 +1,33 @@
 // Get the modal
-var modal = document.querySelector(".modal");
+var imgModal = document.querySelector(".img-modal");
 var images = document.querySelectorAll(".card-image");
-var modalImg = modal.querySelector(".modal-content");
+var imgModalContent = imgModal.querySelector(".img-modal-content");
 
 // Loop through all images and add click event listener
 images.forEach(function(image) {
     image.addEventListener('click', function() {
-        modal.style.display = "flex";
-        modalImg.src = this.src;
+        imgModal.style.display = "flex";
+        imgModalContent.src = this.src;
     });
 });
 
 // Get the <span> element that closes the modal
-var span = modal.querySelector(".close");
+var span = imgModal.querySelector(".img-close");
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
-    modal.style.display = "none";
+    imgModal.style.display = "none";
 }
 
 // Close the modal when clicking outside the modal content
-modal.onclick = function(event) {
-    if (event.target == modal) {
+imgModal.onclick = function(event) {
+    if (event.target == imgModal) {
+        imgModal.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    if (event.target == imgModal) {
         modal.style.display = "none";
     }
 }

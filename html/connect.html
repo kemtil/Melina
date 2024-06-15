@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/mail.css" />
     <title>Connect with ME</title>
   </head>
 
@@ -37,18 +38,89 @@
           </li>
         </ul>
       </nav>
-      <div class="container">
-        <h3>Contacts</h3>
-        <p>
-          <img class="icon" src="../img/web_icon.svg" style="display: inline-block; vertical-align: middle" />
-          <span style="vertical-align: middle">&nbsp;aaaaction@gmail.com</span>
-        </p>
-        <p>
-          <img class="icon" src="../img/instagram.svg" style="display: inline-block; vertical-align: middle" />
-          <span style="vertical-align: middle"><a href="https://www.instagram.com/emotional_palettte/" style="color:var(--indigo-4)"
-            >&nbsp;emotional_bpalettte</a
-          ></span>
-        </p>
+      <div id="container-connect" class="container">
+        <div>
+          <h3>Contacts</h3>
+          <p>
+            <img
+              class="icon"
+              src="../img/web_icon.svg"
+              style="display: inline-block; vertical-align: middle"
+            />
+            <span style="vertical-align: middle"
+              >&nbsp;aaaaction@gmail.com</span
+            >
+          </p>
+          <p>
+            <img
+              class="icon"
+              src="../img/instagram.svg"
+              style="display: inline-block; vertical-align: middle"
+            />
+            <span style="vertical-align: middle"
+              ><a
+                href="https://www.instagram.com/emotional_palettte/"
+                style="color: var(--indigo-4)"
+                >&nbsp;emotional_bpalettte</a
+              ></span
+            >
+          </p>
+        </div>
+        <div>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>
+                Thank you for contacting me.<br />
+                I will get back to you shortly
+              </p>
+            </div>
+          </div>
+          <h3>E-mail Me!</h3>
+          <form
+            id="emailForm"
+            class="gform"
+            action="https://script.google.com/macros/s/AKfycbxdzV36GAGYHT8TVyQGFKg0FwW1Dd3m5rsbYvzJOvNM9DAANR2jS_jy0QZCBF9dwAJaNA/exec"
+            method="POST"
+            data-email="lusernkit@gmail.com"
+          >
+            <fieldset>
+              <div class="box-input">
+                <label for="userName">NAME</label>
+                <input
+                  type="text"
+                  id="userName"
+                  name="name"
+                  placeholder="Your Name"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="box-input">
+                <label for="userEmail">E-MAIL ADDRESS</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  name="email"
+                  placeholder="Your E-mail"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="box-input">
+                <label for="userMessage">MESSAGE</label>
+                <textarea
+                  id="userMessage"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="box-input">
+                <button type="submit" class="btn-send">Send Message</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
   </body>
@@ -58,13 +130,25 @@
       <span> Melina's Portfolio </span> <br />
       <span class="contents-divider"></span>
       <span class="info">
-        <img class="icon" src="../img/web_icon.svg" />melin.netlify.app&nbsp;&nbsp;&nbsp;&nbsp;
-        <img class="icon" src="../img/email_icon.svg" />aaaaction@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;
-        <img class="icon" src="../img/instagram.svg" /><a href="https://www.instagram.com/emotional_palettte/"
+        <img
+          class="icon"
+          src="../img/web_icon.svg"
+        />melin.netlify.app&nbsp;&nbsp;&nbsp;&nbsp;
+        <img
+          class="icon"
+          src="../img/email_icon.svg"
+        />aaaaction@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;
+        <img class="icon" src="../img/instagram.svg" /><a
+          href="https://www.instagram.com/emotional_palettte/"
           >emotional_bpalettte</a
         >
       </span>
     </div>
   </footer>
   <script src="../script/footer_control.js"></script>
+  <script
+    data-cfasync="false"
+    type="text/javascript"
+    src="../script/form-submission-handler.js"
+  ></script>
 </html>

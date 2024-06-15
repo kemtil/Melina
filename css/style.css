@@ -62,6 +62,7 @@ p {
 a {
   text-decoration: none;
   text-decoration-line: none;
+  color: var(--indigo-3);
 }
 
 .content {
@@ -71,6 +72,10 @@ a {
 .container {
   max-width: clamp(40rem, 70vw, 70rem);
   color: var(--indigo-4);
+}
+
+#container-connect {
+  max-width: clamp(30rem, 40vw, 60rem);
 }
 
 .horizontal-divider {

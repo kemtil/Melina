@@ -14,18 +14,9 @@ nav ul {
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media (min-width: 701px) {
-  .dropdown {
-    position: relative;
-    &:hover .dropdown-content {
-      display: block;
-    }
-  }
-}
-
 nav ul li {
   display: inline-block;
-  width: clamp(4rem, 15vw, 10rem);
+  width: clamp(4rem, 22vw, 10rem);
   height: clamp(2.5rem, 5vw, 3rem);
   &:hover {
     background-color: var(--blue-3);
@@ -40,12 +31,16 @@ nav ul li {
 .dropdown {
   margin: 0;
   padding: 0;
+  position: relative;
+  &:hover .dropdown-content {
+    display: block;
+  }
 }
 
 .dropdown-menu {
   display: flex;
   justify-content: center;
-  width: clamp(4rem, 15vw, 10rem);
+  width: clamp(4rem, 22vw, 10rem);
 }
 
 .dropdown-menu a:hover .nav-icon {
@@ -55,7 +50,7 @@ nav ul li {
 
 .dropdown-menu a,
 .dropdown-content a {
-  width: clamp(4rem, 15vw, 10rem);
+  width: clamp(4rem, 22vw, 10rem);
   height: clamp(2.5rem, 5vw, 3rem);
   display: flex;
   justify-content: center;
@@ -78,7 +73,7 @@ nav ul li {
 
 .dropdown-content {
   text-decoration: none;
-  width: clamp(4rem, 15vw, 10rem);
+  width: clamp(4rem, 22vw, 10rem);
 }
 
 .dropdown-content {
