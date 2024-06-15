@@ -78,6 +78,18 @@ a {
   max-width: clamp(30rem, 40vw, 60rem);
 }
 
+.connect-item {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.connect-item>img{
+  height:clamp(2rem, 6vw, 3rem);
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+
 .horizontal-divider {
   border-bottom: 1px solid var(--indigo-5);
 }
