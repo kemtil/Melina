@@ -25,7 +25,7 @@ textarea {
 }
 
 textarea {
-  height: clamp(8rem, 25vw, 15rem);
+  height: clamp(6rem, 20vw, 15rem);
 }
 
 .box-input {

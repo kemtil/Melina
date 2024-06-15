@@ -195,7 +195,7 @@ header a {
   display: flex;
   position: relative;
   align-items: center;
-  margin: 0 0.5vw 0 0.5vw;
+  margin: 0 0.2vw 0 0.5vw;
   &::after {
     content: "";
     width: 1px;
@@ -219,4 +219,9 @@ header a {
   filter: brightness(0) saturate(100%) invert(17%) sepia(84%) saturate(2285%)
     hue-rotate(224deg) brightness(97%) contrast(89%);
  
+}
+
+.no-link {
+  text-decoration: none;
+  position: relative;
 }
