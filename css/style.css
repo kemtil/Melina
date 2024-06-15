@@ -223,5 +223,5 @@ header a {
 
 .no-link {
   text-decoration: none;
-  position: relative;
+  -webkit-text-decoration: none;
 }
